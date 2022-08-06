@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 10px;
+  background-color: rgb(249, 249, 84);
+}
+
+.search-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-areas: "sf sf sf sf sb";
+  height: 40px;
+  grid-gap: 15px;
+}
+
+#search-field {
+  grid-area: "sf";
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  padding: 10px;
+  background-color: rgb(249, 249, 84);
+  font-size: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+#search-btn {
+  grid-area: "sb";
+  text-align: center;
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+#cities-container {
+  margin-top: 30px;
+}
+
+.city-card {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(106, 106, 220);
+  border-radius: 5px;
+  box-shadow: 3px 3px rgb(65, 64, 64);
+  margin-bottom: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.action-icon {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.city-temp {
+  width: 40%;
+  text-align: center;
+}
+
+.temp {
+  margin-bottom: 15px;
+}
+
+.city-condition {
+  width: 40%;
+  height: 100%;
+  padding: 5px;
+  text-align: center;
+}
+
+.save-circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+}
+
+.remove-circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  margin-left: 10px;
+}

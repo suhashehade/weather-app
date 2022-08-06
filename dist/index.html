@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-container">
+        <input id="search-field" placeholder="Search a city" />
+        <i id="search-btn" class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <div id="cities-container"></div>
+    </div>
+
+    <script id="city-template" type="text/x-handlebars-template">
+      {{#each cities}}
+        <div class="city-card">
+          <div class="action-icon">
+            {{#if _id}}
+              <span
+                id="remove-btn"
+                data-name="{{name}}"
+                class="remove-circle"
+              ><i class="fa-solid fa-minus"></i></span>
+              <span
+                id="update-btn"
+                data-name="{{name}}"
+                class="remove-circle"
+              ><i class="fa-solid fa-arrow-rotate-right"></i></span>
+            {{else}}
+              <span id="save-btn" class="save-circle"><i
+                  class="fa-solid fa-plus"
+                ></i></span>
+            {{/if}}
+          </div>
+
+          <div class="city-temp">
+            <h3 class="temp">{{temperature}}<span>&#8451;</span></h3>
+            <h4 class="name">{{name}}</h4>
+          </div>
+
+          <div class="city-condition">
+            <img class="condition-icon" src="{{conditionPic}}" />
+            <p class="condition">{{condition}}</p>
+          </div>
+        </div>
+      {{/each}}
+    </script>
+    <script src="./handlebars/dist/handlebars.min.js"></script>
+    <script src="./jquery/dist/jquery.min.js"></script>
+    <script src="TempManager.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
