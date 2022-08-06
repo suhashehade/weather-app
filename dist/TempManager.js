@@ -68,6 +68,8 @@ class TempManager {
       success: (city) => {
         let updatedCity = this.cityData.find((c) => c.name === city.name);
         updatedCity.temperature = city.temperature;
+        updatedCity.condition = city.condition;
+        updatedCity.conditionPic = city.conditionPic;
       },
       error: function (error) {
         alert(JSON.parse(error.responseText).error);

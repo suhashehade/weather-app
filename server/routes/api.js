@@ -63,7 +63,14 @@ router.put("/city/:cityName", function (request, response) {
         {
           name: cityData.name,
         },
-        { temperature: temperature },
+        {
+          temperature: temperature,
+          condition: cityData.weather[0].description,
+          conditionPic:
+            "http://openweathermap.org/img/w/" +
+            cityData.weather[0].icon +
+            ".png",
+        },
         { new: true },
         function (err, city) {
           response.send(city);
