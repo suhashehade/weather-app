@@ -11,7 +11,7 @@ mongoose.connect(MONGO_URI)
 const PORT = 4040;
 const app = express();
 
-app.use(express.json());
+// app.use(express.json());
 app.use(bodyParser.json())
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "../dist")));
