@@ -2,8 +2,8 @@ const axios = require("axios");
 const express = require("express");
 const router = express.Router();
 const City = require("../models/City");
-const bodyParser = require("body-parser");
 const zeroCelsius = 273.15;
+
 
 const externalRequest = function (cityName) {
   return axios.get(
