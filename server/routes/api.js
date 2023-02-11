@@ -17,7 +17,7 @@ router.get("/city/:cityName", function (request, response) {
   requestPromise
     .then(function (resp) {
       let cityData = resp.data;
-      let temperature = parseInt(cityData.main.temp - zeroCelsius);
+      let temperature = cityData.main.temp - zeroCelsius;
       let city = {
         name: cityData.name,
         temperature: temperature,
@@ -91,3 +91,6 @@ router.delete("/city/:cityName", function (request, response) {
 });
 
 module.exports = router;
+
+
+

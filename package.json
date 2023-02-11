@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "netlify-lambda serve src",
+    "build": "netlify-lambda build src"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,12 @@
     "@fortawesome/fontawesome-free": "^6.1.2",
     "axios": "^0.27.2",
     "body-parser": "^1.20.0",
+    "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "handlebars": "^4.7.7",
     "jquery": "^3.6.0",
-    "mongoose": "^6.5.0"
+    "mongoose": "^6.5.0",
+    "netlify-lambda": "^2.0.15",
+    "serverless-http": "^3.1.1"
   }
 }
