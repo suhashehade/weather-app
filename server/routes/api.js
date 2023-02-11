@@ -11,6 +11,12 @@ const externalRequest = function (cityName) {
   );
 };
 
+router.get("/", function (request, response) { 
+  City.find({}, function (err, res) {
+    response.send(res);
+  });
+})
+
 router.get("/city/:cityName", function (request, response) {
   let cityName = request.params.cityName;
   let requestPromise = externalRequest(cityName);
